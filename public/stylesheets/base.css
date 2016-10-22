@@ -1,0 +1,65 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font: 200 0.85em 'museo_sans300';
+    padding: 0;
+    color: #6e6e6e;
+    margin: 0;
+    -webkit-appearance: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media print {
+    * {
+        display:none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'museo_sans300', 'sans-serif';
+}
+
+input, select, textarea, button, .button {
+    font: 200 0.85em 'museo_sans300';
+    oUtline: none;
+    border: 1px solid #eee;
+    padding: 0.45em 0.5em 0.35em;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0.35em 0.5em;
+    color: #555;
+}
+
+.headerpanel {
+    padding: .5em 1em;
+    background-color: #eee;
+    margin: 0 2em 1em;
+    position: relative;
+    border-radius: 10px;
+}
+.headerpanel:after{
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+
+}
+button, input[type="submit"] {
+    border-radius: 0.3em;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #4072af;
+    color: white;
+    transition: all 250ms ease;
+    cursor: pointer;
+}
+
+h1.title {
+    padding: 0.5em 0.7em 0.4em;
+    background-color: #aaa;
+    color: white;
+    font-family: museo_sans100;
+    margin: 0;
+}
+

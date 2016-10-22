@@ -1,0 +1,16 @@
+{
+  "name": "BankOfQuestions",
+  "version": "1.0.0",
+  "authors": [
+    "Hamid <hamid_hoseini@aol.com>"
+  ],
+  "description": "Bank of questions of Go-livelabs co.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

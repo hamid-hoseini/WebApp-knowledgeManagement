@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="boqAPP">
+  <head>
+    <title>Bank of Questions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/custom.css' />
+    <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css' />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+
+  </head>
+  <body>
+
+  <div class="container" style="width: 100vw; padding: 0">
+    <div class="jumbotron text-right" style="padding: 1em 3em; margin-bottom: 1em">
+      <a href="#/login" class="btn btn-default"><span class="fa fa-user"></span>  Login</a>
+      <a href="#/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
+    </div>
+
+  </div>
+
+
+  <div ng-view></div>
+  <footer> 2015 © All Rights Reserved.</footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+
+  <script src="/javascripts/router.js"></script>
+  <script src="/javascripts/Controllers/mainCtrl.js"></script>
+  <script src="/javascripts/Controllers/authCtrl.js"></script>
+  <script src="/javascripts/Controllers/questionsCtrl.js"></script>
+  <script src="/javascripts/Controllers/modalCtrl.js"></script>
+  <script src="/javascripts/config.js"></script>
+
+  <script src="/javascripts/Services/mainSrv.js"></script>
+  </body>
+</html>

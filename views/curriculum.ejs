@@ -1,0 +1,74 @@
+
+<div class="headerpanel">
+    <div class="mybreadcrumb">
+    <ul id="breadcrumb">
+        <li ng-repeat="record in breadCrumb">{{record.text}} <span ng-hide="$index == breadCrumb.length-1"> > </span> </li>
+    </ul>
+    </div>
+    <div class="btnpabnel">
+        <button id="githubbtn" ng-click="getGitRepo()" ng-show="selected == 'topic'"><i class="fa fa-github"></i> Github links</button>
+        <button id="refbtn" ng-click="getRefMaterial()" ng-show="selected == 'topic'" ><i class="fa fa-external-link"></i> Reference Links</button>
+        <button id="projbtn" ng-click="getProjects()" ng-show="selected == 'subject'"><i class="fa fa-leanpub"></i> Projects</button>
+        <button id="slidesbtn" ng-click="getSlides()" ng-show="selected == 'subject'"><i class="fa fa-television"></i> Slides</button>
+        <button id="addbtn" ng-click="addNewItem()" class="addnew"><i class="fa fa-plus-square-o"></i> New Subject</button>
+        <button id="editbtn" ng-click="" ><i class="fa fa-pencil-square-o"></i> Edit</button>
+
+    </div>
+</div>
+
+<div class="mytree">
+    <div id="curriculum"></div>
+</div>
+
+<div class="mygrid">
+    <div id="grid1" class="gridStyle" ui-grid="gridOptions" ui-grid-selection></div>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h4 class="modal-title">{{items.item_desc}}</h4>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="item in items.data.result">
+                <!--<a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>-->
+                <a href="{{item.url}}" ng-click="" target="_blank">{{ item.description }}</a>
+            </li>
+        </ul>
+        <!--Selected: <b>{{ selected.item }}</b>-->
+        <span ng-click="addItem()" ng-hide="input" class="cursor"><i class="fa fa-plus-circle"></i> Add New</span>
+        <div ng-show="input" class="mrg_lft_35">
+            <input id="desc" ng-model="desc" type="text" placeholder="Enter Description" class="mrg_btn_5"/>
+            <input id="url" ng-model="url" type="text" placeholder="Enter URL" />
+            <br/>
+            <span ng-click="saveRecord()" class="cursor"><i class="fa fa-floppy-o"></i> Save </span>
+            <span ng-click="cancel()" class="cursor mrg_lft_20" ><i class="fa fa-times"></i> Cancel </span>
+            <span ng-click="triger()" class="cursor mrg_lft_20" ><i class="fa fa-times"></i> test </span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!--<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>-->
+        <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="addEditContent.html">
+    <div class="modal-header">
+        <h4 class="modal-title">{{items.item_desc}}</h4>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="item in items.data">
+                {{ item }}
+            </li>
+        </ul>
+        <div class="mrg_lft_35">
+            <input id="desc" ng-model="desc" type="text" placeholder="Enter Description" class="mrg_btn_5"/>
+            <br/>
+            <span ng-click="saveNewItem()" class="cursor"><i class="fa fa-floppy-o"></i> Save </span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+    </div>
+</script>
