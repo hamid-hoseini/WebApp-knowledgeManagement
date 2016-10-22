@@ -14,7 +14,7 @@ module.exports = function(app) {
 
     app.use(session({
         store: new MongoStore({
-            url: 'mongodb://localhost/bankquestion'
+            url: 'mongodb://localhost/authentication'
         }),
         secret: 'codetutorialsecret',
         resave:true,
@@ -48,8 +48,8 @@ module.exports = function(app) {
 
 
     passport.use(new FacebookStrategy({
-            clientID: '1598215213755624',
-            clientSecret: 'c019a55f66e96fbb30d1dc882e64406a',
+            clientID: '',
+            clientSecret: '',
             callbackURL: "http://localhost:3000/auth/facebook/callback"
         },function(accessToken, refreshToken, profile, done) {
             process.nextTick(function () {

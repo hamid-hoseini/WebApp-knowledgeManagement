@@ -3,6 +3,6 @@
  */
 module.exports = {
 
-    'url' : 'mongodb://localhost/bankquestion' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
+    'url' : 'mongodb://localhost/authentication' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
 
 };
