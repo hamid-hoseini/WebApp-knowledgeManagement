@@ -1,6 +1,4 @@
-/**
- * Created by andrea.terzani on 07/04/2015.
- */
+
 module.exports = function(app) {
     var passport = require('passport');
     var mongoose = require('mongoose');

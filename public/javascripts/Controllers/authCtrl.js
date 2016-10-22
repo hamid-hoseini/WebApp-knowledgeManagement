@@ -1,9 +1,6 @@
 /**
  * Created by hamidhoseini on 10/16/15.
  */
-/**
- * Created by andrea.terzani on 09/04/2015.
- */
 
 mainControllers.controller('authController', function($scope,$http,$location) {
 
